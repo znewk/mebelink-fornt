@@ -76,13 +76,13 @@ const Services = () => {
                 {
                     furniture.map((item)=>{
                         return (
-                            <div className={styles.card}>
+                            <div className={styles.card} onClick={()=> {
+                                setProductToOrder(item)
+                                setShow(!show)
+                            }}>
                                     <div className={styles.cardImageBody}>
                                         <Image src={item.img} alt={'icon'} height={1024} width={1024} className={styles.cardImage}/>
-                                        <button className={styles.btn} onClick={()=> {
-                                            setProductToOrder(item)
-                                            setShow(!show)
-                                        }}>
+                                        <button className={styles.btn}>
                                             <Image src={'/plus.png'} height={64} width={64} alt={'plus'} className={styles.btnImg}/>
                                         </button>
                                     </div>
