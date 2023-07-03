@@ -100,10 +100,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        padding: 15px;
         bottom: -200px;
     }
     .card{
         width: 45%;
+    }
+    .cardd{
         margin-bottom: 50px;
     }
     .mobileHr{

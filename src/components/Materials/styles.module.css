@@ -55,6 +55,10 @@
         width: 100%;
     }
     .title{
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    .title{
         margin-bottom: 50px;
     }
     .carousel{

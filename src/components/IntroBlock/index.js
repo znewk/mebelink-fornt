@@ -36,7 +36,7 @@ const IntroBlock = () => {
             <button className={styles.btn}>УСЛУГИ</button>
 
             <div className={styles.static}>
-                <div className={styles.card}>
+                <div className={classnames(styles.card, styles.cardd)}>
                     <h2 className={styles.cardTitle}>
                         <Number n={3}/>
                     </h2>
@@ -45,8 +45,8 @@ const IntroBlock = () => {
                     </p>
                 </div>
                 <div className={styles.hr}></div>
-                <div className={styles.card}>
-                    <h2 className={styles.cardTitle}>
+                <div className={classnames(styles.card, styles.cardd)}>
+                    <h2 className={classnames(styles.cardTitle)}>
                         <Number n={2}/>
                     </h2>
                     <p className={styles.cardSubtitle}>

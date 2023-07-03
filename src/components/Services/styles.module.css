@@ -66,8 +66,9 @@
     align-items: center;
     font-size: 22px;
     font-family: "Gilroy Medium";
-    height: 26px;
-    width: 26px;
+    height: 20px;
+    padding: 6px;
+    width: 20px;
     border-radius: 50%;
     background-color: #286F6C;
     color: white;
@@ -90,6 +91,9 @@
 }
 
 @media screen and (max-width: 767px) {
+    .title{
+        font-size: 26px;
+    }
     .card{
         width: 49%;
         font-size: 20px;
@@ -104,8 +108,9 @@
         font-size: 12px;
     }
     .btn{
-        height: 22px;
-        width: 22px;
+        height: 16px;
+        width: 16px;
+        padding: 6px;
         font-size: 16px;
     }
     .card:hover > .cardImageBody .btn{

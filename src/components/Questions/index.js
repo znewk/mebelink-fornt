@@ -74,7 +74,7 @@ const Questions = () => {
                                  onClick={() => setOpen(!isOpen)}
                             >
                                 <div className={styles.questionBlock}>
-                                    <h3>{item.question}</h3>
+                                    <h3 className={styles.questionText}>{item.question}</h3>
                                     <motion.img
                                         layout
                                         style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0)" }}

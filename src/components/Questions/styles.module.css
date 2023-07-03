@@ -50,8 +50,15 @@
     .container{
         flex-direction: column-reverse;
     }
+    .title{
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
     .titleBlock{
         width: 100%;
+    }
+    .questionText{
+        font-size: 18px;
     }
     .title{
         margin-bottom: 50px;
