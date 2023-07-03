@@ -58,7 +58,13 @@
         width: 100%;
     }
     .questionText{
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .answer{
+        font-size: 14px;
+    }
+    .hr{
+        width: 100%;
     }
     .title{
         margin-bottom: 50px;

@@ -30,7 +30,8 @@ const Materials = () => {
     ])
 
     useEffect(()=>{
-        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth > 1024 ? carousel.current.scrollWidth - carousel.current.offsetWidth : 950 )
+        console.log('widht ',carousel.current.scrollWidth - carousel.current.offsetWidth)
     }, [])
     return (
         <div className={styles.container}>
