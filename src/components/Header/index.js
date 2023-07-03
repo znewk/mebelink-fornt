@@ -4,11 +4,19 @@ import Image from "next/image";
 import {motion} from "framer-motion";
 import classnames from "classnames"
 import {useState} from "react";
+import ModalWindow from "../Modal/ModalWindow/ModalWindow";
+import CreateApplicationForm from "../Forms/CreateApplicationForm";
 
 const Header = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+
+    const [show, setShow] = useState(false);
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+
     return (
         <div className={styles.header}>
+            <ModalWindow show={show} handleClose={handleClose} heading={`Сделать заказ`} body={<CreateApplicationForm/>}/>
             <div className={styles.logo}>
                 <Link href={'/'} className={styles.logoLink}>
                     <h2>MEBELINK</h2>
@@ -24,10 +32,8 @@ const Header = () => {
                     <Link href={'/'} className={styles.menuItem}>
                         <li>Главная</li>
                     </Link>
-                    <Link href={'/order'} className={styles.menuItem}>
-                        <li>Сделать заказ</li>
-                    </Link>
-                    <Link href={'/about'} className={styles.menuItem}>
+                    <li onClick={()=>{setShow(!show)}} className={styles.menuItem}>Сделать заказ</li>
+                    <Link href={'/'} className={styles.menuItem}>
                         <li>О нас</li>
                     </Link>
                 </ul>
@@ -40,10 +46,8 @@ const Header = () => {
                     <Link href={'/'} className={styles.menuItem}>
                         <li>Главная</li>
                     </Link>
-                    <Link href={'/order'} className={styles.menuItem}>
-                        <li>Сделать заказ</li>
-                    </Link>
-                    <Link href={'/about'} className={styles.menuItem}>
+                    <li onClick={()=>{setShow(!show)}} className={styles.menuItem}>Сделать заказ</li>
+                    <Link href={'/'} className={styles.menuItem}>
                         <li>О нас</li>
                     </Link>
                     <Link href={'https://wa.me/+77068171765'} className={classnames(styles.menuItem, styles.block)}>

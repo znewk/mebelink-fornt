@@ -58,7 +58,11 @@
 .link{
     color: white;
 }
-
+.error{
+    display: block;
+    margin: 15px 0;
+    font-weight: bold;
+}
 @media screen and (max-width: 767px){
     .container{
 

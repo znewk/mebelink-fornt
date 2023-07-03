@@ -1,10 +1,18 @@
 import styles from './styles.module.css'
 import Link from "next/link";
 import Image from "next/image";
+import ModalWindow from "../Modal/ModalWindow/ModalWindow";
+import CreateApplicationForm from "../Forms/CreateApplicationForm";
+import {useState} from "react";
 
 const Footer = () => {
+    const [show, setShow] = useState(false);
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+
     return (
         <footer className={styles.footer}>
+            <ModalWindow show={show} handleClose={handleClose} heading={`Сделать заказ`} body={<CreateApplicationForm/>}/>
             <div className={styles.footerTop}>
                 <h2 className={styles.topTitle}>MEBELINK</h2>
 
@@ -27,9 +35,7 @@ const Footer = () => {
                     <Link href={'/'} className={styles.columnItem}>
                         <span>Главная</span>
                     </Link>
-                    <Link href={'/'} className={styles.columnItem}>
-                        <span>Сделать заказ</span>
-                    </Link>
+                    <span onClick={()=>{setShow(!show)}} className={styles.columnItem}>Сделать заказ</span>
                     <Link href={'/'} className={styles.columnItem}>
                         <span>О нас</span>
                     </Link>

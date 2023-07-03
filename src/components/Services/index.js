@@ -1,11 +1,17 @@
 import styles from './styles.module.css'
 import {useState} from "react";
 import Image from "next/image";
+import ModalWindow from "../Modal/ModalWindow/ModalWindow";
+import CreateApplicationToProduct from "../Forms/CreateApplicationToProduct";
 
 const Services = () => {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const [furniture, setFurniture] = useState([
         {
+            toRest: true,
             title: 'Стулья',
             old_price: '₸ 10.000',
             price: '₸ 8.000',
@@ -13,6 +19,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            toRest: true,
             title: 'Диваны',
             old_price: '₸ 75.000',
             price: '₸ 50.000',
@@ -20,6 +27,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            toRest: true,
             title: 'Кресла',
             old_price: '₸ 45.000',
             price: '₸ 30.000',
@@ -27,6 +35,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            toRest: true,
             title: 'Диван двойка',
             old_price: '₸ 75.000',
             price: '₸ 50.000',
@@ -34,6 +43,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            toRest: true,
             title: 'Подлокотники',
             old_price: '₸ 15.000',
             price: '₸ 10.000',
@@ -41,6 +51,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            toRest: true,
             title: 'Угловые диваны',
             old_price: '₸ 100.000',
             price: '₸ 80.000',
@@ -49,8 +60,11 @@ const Services = () => {
         },
     ])
 
+    const [productToOrder, setProductToOrder] = useState({})
+
     return (
         <div className={styles.container}>
+            <ModalWindow show={show} handleClose={handleClose} heading={`Сделать заказ`} body={<CreateApplicationToProduct product={productToOrder}/>}/>
             <div className={styles.titleBlock}>
                 <h2 className={styles.title}>Перетяжка мебели</h2>
                 <p>
@@ -65,7 +79,10 @@ const Services = () => {
                             <div className={styles.card}>
                                     <div className={styles.cardImageBody}>
                                         <Image src={item.img} alt={'icon'} height={1024} width={1024} className={styles.cardImage}/>
-                                        <button className={styles.btn}>+</button>
+                                        <button className={styles.btn} onClick={()=> {
+                                            setProductToOrder(item)
+                                            setShow(!show)
+                                        }}>+</button>
                                     </div>
                                     <div className={styles.cardFooter}>
                                         <h3 className={styles.cardTitle}>{item.title}</h3>

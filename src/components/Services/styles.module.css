@@ -103,4 +103,13 @@
     .oldPrice{
         font-size: 12px;
     }
+    .btn{
+        height: 22px;
+        width: 22px;
+        font-size: 16px;
+    }
+    .card:hover > .cardImageBody .btn{
+        transform: none;
+        font-size: 16px;
+    }
 }

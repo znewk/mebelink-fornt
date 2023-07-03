@@ -1,8 +1,38 @@
 import styles from "./styles.module.css"
 import classnames from 'classnames'
 import Link from "next/link";
+import API from "../../api";
+import {useEffect, useRef, useState} from "react";
+import 'react-phone-number-input/style.css'
+import PhoneInput, { formatPhoneNumber, formatPhoneNumberIntl } from 'react-phone-number-input/input'
+import kz from 'react-phone-number-input/locale/ru.json'
 
 const ApplicationBlock = () => {
+    const api = new API()
+
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('+7')
+    const [message, setMessage] = useState('')
+    const [state, setState] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [appSend, setAppSend] = useState(false)
+    const sendApplication = async () => {
+        if(phone.length<12 || phone.length > 12) {
+            setState('Неккоретный номер телефона')
+        }
+        else if(name.length<3){
+            setState('Неккоретная длина ФИО')
+        } else {
+            await api.createNewApplicationToConsultation(name, phone, message)
+            setAppSend(true)
+
+            setState('Заявка успешно отправлена! Ожидайте звонка.')
+        }
+        setLoading(false)
+    }
+
+
+
     return (
         <div className={styles.container}>
             <div className={styles.form}>
@@ -13,11 +43,28 @@ const ApplicationBlock = () => {
                 </div>
 
                 <div className={styles.inputs}>
-                    <input type="text" className={styles.input} placeholder={'Контактное лицо'}/>
-                    <input type="text" className={styles.input} placeholder={'Номер телефона'}/>
-                    <textarea className={classnames(styles.input, styles.textarea)} placeholder={'Краткое сообщение'}></textarea>
-                    <button className={styles.btn}>Жду звонка</button>
+                    <input type="text" className={styles.input} placeholder={'Контактное лицо'} onChange={event => setName(event.target.value)}/>
+
+
+                    <PhoneInput
+                        placeholder="Номер телефона"
+                        countryCallingCodeEditable={false}
+                        defaultCountry="KZ"
+                        labels={kz}
+                        value={phone}
+                        className={styles.input}
+                        onChange={setPhone}/>
+                    <textarea className={classnames(styles.input, styles.textarea)} placeholder={'Краткое сообщение'} onChange={event => setMessage(event.target.value)}></textarea>
+                    <button className={styles.btn}
+                            onClick={()=> {
+                                setLoading(true)
+                                setState('Загрузка...')
+                                sendApplication()
+                            }}
+                    >Жду звонка</button>
                 </div>
+
+                <span className={classnames(styles.error)} style={{color: state === 'Заявка успешно отправлена! Ожидайте звонка.' || 'Загрузка...' ? 'white' : 'orangered'}}>{state}</span>
 
                 <div className={styles.footer}>
                     <p className={styles.footerTitle}>Или свяжитесь с нами напрямую</p>
