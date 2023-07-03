@@ -1,0 +1,14 @@
+.container {
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("/intro_block.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.errorTitle{
+    color: white;
+    font-size: 48px;
+}

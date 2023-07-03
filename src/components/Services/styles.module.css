@@ -1,0 +1,106 @@
+.container {
+    padding:  0 10%;
+
+}
+.titleBlock{
+    text-align: center;
+}
+.title{
+    font-size: 32px;
+    margin-top: 0;
+}
+.wrapper{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.card{
+    width: 26%;
+    margin-bottom: 50px;
+    position: relative;
+}
+/*.cardImage{*/
+/*    width: 100%;*/
+/*    height: 200px;*/
+/*    background-position: center;*/
+/*    position: relative;*/
+/*    background-repeat: no-repeat;*/
+/*    !*border: 1px solid #dadada;*!*/
+/*    border-radius: 10px;*/
+/*}*/
+.cardImageBody{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.cardImage{
+    width: 100%;
+    height: auto;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.price{
+    font-family: 'Gilroy Medium';
+    margin-right: 5px;
+}
+.oldPrice{
+    color: #6e6e6e;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+.priceBlock{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: "Gilroy Medium";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: #286F6C;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+}
+.cardFooter h3{
+    transition: 0.3s;
+}
+.card:hover > .cardFooter h3 {
+    color: #286F6C;
+}
+.card:hover > .cardImageBody .btn{
+    transform: rotate(360deg);
+    font-size: 32px;
+}
+.card:hover > .cardImageBody .cardImage{
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 767px) {
+    .card{
+        width: 49%;
+        font-size: 20px;
+    }
+    .cardTitle{
+        font-size: 18px;
+    }
+    .price{
+        font-size: 16px;
+    }
+    .oldPrice{
+        font-size: 12px;
+    }
+}

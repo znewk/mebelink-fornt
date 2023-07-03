@@ -1,0 +1,65 @@
+.header {
+    padding: 0 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+    z-index: 10;
+}
+.menuList{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.menuItem{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #23262F;
+    transition: 0.5s;
+}
+.menuItem:hover, .logoLink:hover{
+    color: #286F6C;
+}
+.logo{
+    width: 20%;
+}
+.menu{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.waBlock{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+.logoLink{
+    text-decoration: none;
+    color: #23262F;
+    font-family: Gilroy Bold;
+    font-size: 22px;
+    transition: 0.5s;
+}
+.logoLink > h2 {
+    margin: 0;
+}
+.waIcon{
+    height: 42px;
+    width: 42px;
+}
+
+@media screen and (max-width: 767px){
+    .header{
+        display: none;
+    }
+}

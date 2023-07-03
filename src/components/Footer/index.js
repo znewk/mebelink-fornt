@@ -1,0 +1,57 @@
+import styles from './styles.module.css'
+import Link from "next/link";
+import Image from "next/image";
+
+const Footer = () => {
+    return (
+        <footer className={styles.footer}>
+            <div className={styles.footerTop}>
+                <h2 className={styles.topTitle}>MEBELINK</h2>
+
+                <div className={styles.networks}>
+                    <Link href={'https://wa.me/+77068171765'}>
+                        <Image src={'/whatsapp.png'} height={64} width={64} className={styles.icon} alt={'icon'}/>
+                    </Link>
+                    <Link href={'https://instagram.com/mebelink.kz01?igshid=MzRlODBiNWFlZA=='}>
+                        <Image src={'/instagram.png'} height={64} width={64} className={styles.icon} alt={'icon'}/>
+                    </Link>
+                </div>
+            </div>
+
+            <div className={styles.hr}></div>
+
+            <div className={styles.wrapper}>
+                <div className={styles.column}>
+                    <h3 className={styles.columnTitle}>Маршрутизация</h3>
+
+                    <Link href={'/'} className={styles.columnItem}>
+                        <span>Главная</span>
+                    </Link>
+                    <Link href={'/'} className={styles.columnItem}>
+                        <span>Сделать заказ</span>
+                    </Link>
+                    <Link href={'/'} className={styles.columnItem}>
+                        <span>О нас</span>
+                    </Link>
+                </div>
+
+                <div className={styles.column}>
+                    <h3 className={styles.columnTitle}>Контакты</h3>
+
+                    <Link href={'tel:+77068171765'} className={styles.columnItem}>
+                        <span>+7 (706) 817-17-65</span>
+                    </Link>
+                </div>
+                <div className={styles.column}>
+                    <h3 className={styles.columnTitle}>Почта</h3>
+
+                    <Link href={'mailto:mebelink.kz01@mail.ru'} className={styles.columnItem}>
+                        <span>mebelink.kz01@mail.ru</span>
+                    </Link>
+                </div>
+            </div>
+        </footer>
+    )
+}
+
+export default Footer;
