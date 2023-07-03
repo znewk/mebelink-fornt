@@ -6,8 +6,8 @@
     text-align: center;
 }
 .title{
-    font-size: 32px;
     margin-top: 0;
+    font-size: 28px;
 }
 .wrapper{
     margin-top: 50px;
@@ -93,6 +93,9 @@
 }
 .card:hover > .cardImageBody .cardImage{
     transform: scale(1.05);
+}
+.cardTitle{
+    font-size: 22px;
 }
 
 @media screen and (max-width: 767px) {

@@ -43,6 +43,9 @@
     color: white;
     margin-bottom: 5px;
 }
+.columnTitle{
+    font-size: 22px;
+}
 
 @media screen and (max-width: 767px){
     .footer{

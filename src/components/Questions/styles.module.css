@@ -10,8 +10,8 @@
 }
 .title{
     margin-top: 0;
+    font-size: 28px;
     margin-bottom: 100px;
-    font-size: 32px;
 }
 .questions{
     width: 50%;
@@ -44,8 +44,12 @@
     height: 12px;
     width: 12px;
 }
-
-
+.questionText{
+    font-size: 18px;
+}
+.question{
+    margin-bottom: 25px;
+}
 @media screen and (max-width: 767px){
     .container{
         flex-direction: column-reverse;
