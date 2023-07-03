@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const serverDomain = 'https://order-backend.kz'
-const serverDomain = 'https://mebelink-back-957b184c2e7b.herokuapp.com/'
+const serverDomain = 'https://mebelink-back-957b184c2e7b.herokuapp.com'
 // const serverDomain = 'http://localhost:3030'
 
 class API {
