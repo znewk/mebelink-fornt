@@ -82,7 +82,9 @@ const Services = () => {
                                         <button className={styles.btn} onClick={()=> {
                                             setProductToOrder(item)
                                             setShow(!show)
-                                        }}>+</button>
+                                        }}>
+                                            <Image src={'/plus.png'} height={64} width={64} alt={'plus'} className={styles.btnImg}/>
+                                        </button>
                                     </div>
                                     <div className={styles.cardFooter}>
                                         <h3 className={styles.cardTitle}>{item.title}</h3>

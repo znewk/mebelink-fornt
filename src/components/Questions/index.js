@@ -86,9 +86,10 @@ const Questions = () => {
                                 >
                                     <p>{item.answer}</p>
                                 </motion.div>
+                                <div className={styles.hr}></div>
                             </motion.div>
 
-                            <div className={styles.hr}></div>
+
                         </>
                     )
                 })}
