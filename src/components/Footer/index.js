@@ -20,7 +20,7 @@ const Footer = () => {
                     <Link href={'https://wa.me/+77068171765'}>
                         <Image src={'/whatsapp.png'} height={64} width={64} className={styles.icon} alt={'icon'}/>
                     </Link>
-                    <Link href={'https://instagram.com/mebelink.kz01?igshid=MzRlODBiNWFlZA=='}>
+                    <Link href={'https://instagram.com/mebelink.ast?igshid=Y2IzZGU1MTFhOQ=='}>
                         <Image src={'/instagram.png'} height={64} width={64} className={styles.icon} alt={'icon'}/>
                     </Link>
                 </div>
