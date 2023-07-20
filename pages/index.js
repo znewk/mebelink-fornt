@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "./main.module.css"
 import Header from "../src/components/Header";
+import ym from 'react-yandex-metrika';
 import IntroBlock from "../src/components/IntroBlock";
 import AboutUs from "../src/components/AboutUs";
 import Services from "../src/components/Services";
@@ -12,27 +13,27 @@ import Footer from "../src/components/Footer";
 
 const Index = () => {
 
-    // const ymetrica = () => {
-    //     return (
-    //         "<!-- Yandex.Metrika counter -->\n" +
-    //             "<script type=\"text/javascript\" \n>" +
-    //             "(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\n" +
-    //             "m[i].l=1*new Date();\n" +
-    //             "for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}\n" +
-    //             "k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\n"+
-    //             "(window, document, \"script\", \"https://mc.yandex.ru/metrika/tag.js\", \"ym\");\n" +
-    //             "\n"+
-    //             "ym(94370757, \"init\", {\n"+
-    //             "clickmap:true,\n"+
-    //             "trackLinks:true,\n"+
-    //             "accurateTrackBounce:true,\n"+
-    //             "webvisor:true\n"+
-    //             "});\n"+
-    //             "</script>\n"+
-    //             "<noscript><div><img src=\"https://mc.yandex.ru/watch/94370757\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>\n"+
-    //         "<!-- /Yandex.Metrika counter -->"
-    //     )
-    // }
+    const ymetrica = () => {
+        return (
+            "<!-- Yandex.Metrika counter -->\n" +
+                "<script type=\"text/javascript\">\n" +
+                "(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\n" +
+                "m[i].l=1*new Date();\n" +
+                "for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}\n" +
+                "k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\n"+
+                "(window, document, \"script\", \"https://mc.yandex.ru/metrika/tag.js\", \"ym\");\n" +
+                "\n"+
+                "ym(94370757, \"init\", {\n"+
+                "clickmap:true,\n"+
+                "trackLinks:true,\n"+
+                "accurateTrackBounce:true,\n"+
+                "webvisor:true\n"+
+                "});\n"+
+                "</script>\n"+
+                "<noscript><div><img src=\"https://mc.yandex.ru/watch/94370757\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>\n"+
+            "<!-- /Yandex.Metrika counter -->"
+        )
+    }
 
     return  (
         <div>
