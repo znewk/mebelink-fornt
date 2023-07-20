@@ -26,7 +26,7 @@ const Index = () => {
                 "clickmap:true,\n"+
                 "trackLinks:true,\n"+
                 "accurateTrackBounce:true,\n"+
-                " webvisor:true\n"+
+                "webvisor:true\n"+
                 "});\n"+
                 "</script>\n"+
                 "<noscript><div><img src=\"https://mc.yandex.ru/watch/94370757\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>\n"+
