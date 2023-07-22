@@ -41,7 +41,7 @@ const Index = () => {
             <Head>
                 <title>Упс!</title>
                 <link rel="icon" href="/icon.png" />
-                <div dangerouslySetInnerHTML={{__html: ymetrica()}}/>
+                {/*<div dangerouslySetInnerHTML={{__html: ymetrica()}}/>*/}
             </Head>
 
             <DontWork/>
