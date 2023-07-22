@@ -1,7 +1,7 @@
 .container {
     height: 100vh;
     overflow: hidden;
-    background-image: url("/intro_block.png");
+    /*background-image: url("/intro_block.png");*/
     background-size: cover;
     background-position: center;
     display: flex;
@@ -11,4 +11,12 @@
 .errorTitle{
     color: white;
     font-size: 48px;
+}
+
+@media screen and (max-width: 767px) {
+    .errorTitle{
+        color: white;
+        font-size: 24px;
+        text-align: center;
+    }
 }

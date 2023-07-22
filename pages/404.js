@@ -1,15 +1,47 @@
 import styles from './main.module.css'
 import Header from "../src/components/Header";
 import Head from "next/head";
+import DontWork from "../src/components/DontWork";
+import ym from 'react-yandex-metrika';
 const Error = () => {
+    const ymetrica = () => {
+        return (
+            "<!-- Yandex.Metrika counter -->\n" +
+            "<script type=\"text/javascript\">\n" +
+            "(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\n" +
+            "m[i].l=1*new Date();\n" +
+            "for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}\n" +
+            "k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\n"+
+            "(window, document, \"script\", \"https://mc.yandex.ru/metrika/tag.js\", \"ym\");\n" +
+            "\n"+
+            "ym(94370757, \"init\", {\n"+
+            "clickmap:true,\n"+
+            "trackLinks:true,\n"+
+            "accurateTrackBounce:true,\n"+
+            "webvisor:true\n"+
+            "});\n"+
+            "</script>\n"+
+            "<noscript><div><img src=\"https://mc.yandex.ru/watch/94370757\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>\n"+
+            "<!-- /Yandex.Metrika counter -->"
+        )
+    }
     return (
         <div className={styles.container}>
+
             <Head>
-                <title>MEBELINK - 404 Страница не найдена</title>
+                <title>Упс!</title>
                 <link rel="icon" href="/icon.png" />
+                <div dangerouslySetInnerHTML={{__html: ymetrica()}}/>
             </Head>
-            <Header/>
-            <h1 className={styles.errorTitle}>404 | Страница не найдена</h1>
+
+            <DontWork/>
+
+            {/*<Head>*/}
+            {/*    <title>MEBELINK - 404 Страница не найдена</title>*/}
+            {/*    <link rel="icon" href="/icon.png" />*/}
+            {/*</Head>*/}
+            {/*<Header/>*/}
+            {/*<h1 className={styles.errorTitle}>404 | Страница не найдена</h1>*/}
         </div>
     )
 }
