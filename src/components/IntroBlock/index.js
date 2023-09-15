@@ -33,7 +33,7 @@ const IntroBlock = () => {
                 Мы — специализированное реставрационное ателье-мастерская по ремонту и обивке мягкой мебели в Астане
             </p>
 
-            <button className={styles.btn}>УСЛУГИ</button>
+            <button className={styles.btn} onClick={()=>document.getElementById('services').scrollIntoView({behavior: 'smooth'})}>УСЛУГИ</button>
 
             <div className={styles.static}>
                 <div className={classnames(styles.card, styles.cardd)}>

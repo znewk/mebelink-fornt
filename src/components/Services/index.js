@@ -65,7 +65,7 @@ const Services = () => {
     return (
         <div className={styles.container}>
             <ModalWindow show={show} handleClose={handleClose} heading={`Сделать заказ`} body={<CreateApplicationToProduct product={productToOrder}/>}/>
-            <div className={styles.titleBlock}>
+            <div className={styles.titleBlock} id={'services'}>
                 <h2 className={styles.title}>Перетяжка мебели</h2>
                 <p>
                     Качественная работа по реставрации мебели. <br/>
