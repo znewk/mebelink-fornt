@@ -56,7 +56,7 @@ const Header = () => {
                 </ul>
             </motion.nav>
 
-            <Link href={'https://wa.me/+77068171765'} className={styles.waBlock}>
+            <Link href={'https://wa.me/+77068171765'} className={styles.waBlock} target={'_blank'}>
                 <Image src={'/whatsapp_black.png'} width={64} height={64} alt={'whatsapp icon'} className={styles.waIcon}/>
             </Link>
         </div>

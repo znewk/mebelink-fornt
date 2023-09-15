@@ -45,6 +45,7 @@
     width: 20%;
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
 }
 .logoLink{
     text-decoration: none;

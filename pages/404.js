@@ -28,20 +28,20 @@ const Error = () => {
     return (
         <div className={styles.container}>
 
-            <Head>
+            {/* <Head>
                 <title>Упс!</title>
-                <link rel="icon" href="/icon.png" />
+                <link rel="icon" href="/icon.png" /> */}
                 {/*<div dangerouslySetInnerHTML={{__html: ymetrica()}}/>*/}
+            {/* </Head>
+
+            <DontWork/> */}
+
+            <Head>
+                <title>MEBELINK - 404 Страница не найдена</title>
+                <link rel="icon" href="/icon.png" />
             </Head>
-
-            <DontWork/>
-
-            {/*<Head>*/}
-            {/*    <title>MEBELINK - 404 Страница не найдена</title>*/}
-            {/*    <link rel="icon" href="/icon.png" />*/}
-            {/*</Head>*/}
-            {/*<Header/>*/}
-            {/*<h1 className={styles.errorTitle}>404 | Страница не найдена</h1>*/}
+            <Header/>
+            <h1 className={styles.errorTitle}>404 | Страница не найдена</h1>
         </div>
     )
 }
