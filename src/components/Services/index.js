@@ -11,6 +11,7 @@ const Services = () => {
 
     const [furniture, setFurniture] = useState([
         {
+            id: 213210,
             toRest: true,
             title: 'Стулья',
             old_price: '₸ 10.000',
@@ -19,6 +20,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            id: 213219,
             toRest: true,
             title: 'Диваны',
             old_price: '₸ 75.000',
@@ -27,6 +29,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            id: 21321223,
             toRest: true,
             title: 'Кресла',
             old_price: '₸ 45.000',
@@ -35,6 +38,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            id: 213215,
             toRest: true,
             title: 'Диван двойка',
             old_price: '₸ 75.000',
@@ -43,6 +47,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            id: 212321,
             toRest: true,
             title: 'Подлокотники',
             old_price: '₸ 15.000',
@@ -51,6 +56,7 @@ const Services = () => {
             bg_size: 'cover'
         },
         {
+            id: 21321,
             toRest: true,
             title: 'Угловые диваны',
             old_price: '₸ 100.000',
@@ -74,9 +80,10 @@ const Services = () => {
             </div>
             <div className={styles.wrapper}>
                 {
-                    furniture.map((item)=>{
+                    furniture.map((item, idx)=>{
+
                         return (
-                            <div className={styles.card} onClick={()=> {
+                            <div className={styles.card} key={item.id} onClick={()=> {
                                 setProductToOrder(item)
                                 setShow(!show)
                             }}>
