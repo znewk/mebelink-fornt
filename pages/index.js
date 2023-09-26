@@ -52,7 +52,7 @@ const Index = () => {
             <Head>
                 <title>MEBELINK - Мебельное производство Астана</title>
                 <link rel="icon" href="/icon.png" />
-                {/* <div dangerouslySetInnerHTML={{__html: ymetrica()}}/> */}
+                <div dangerouslySetInnerHTML={{__html: ymetrica()}}/>
             </Head>
 
             <Header/>
