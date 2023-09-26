@@ -11,6 +11,7 @@ import ApplicationBlock from "../src/components/ApplicationBlock";
 import Footer from "../src/components/Footer";
 import DontWork from "../src/components/DontWork";
 import WhatsAppButton from "../src/components/WhatsAppButton";
+import { useEffect } from "react";
 
 const Index = () => {
 
