@@ -50,13 +50,13 @@ const Header = () => {
                     <Link href={'/'} className={styles.menuItem}>
                         <li>О нас</li>
                     </Link>
-                    <Link href={'https://wa.me/+77068171765'} className={classnames(styles.menuItem, styles.block)}>
+                    <Link href={'https://api.whatsapp.com/send?phone=77068171765&text=Здраствуйте,%20пишу%20Вам%20с%20сайта.&source=&data='} className={classnames(styles.menuItem, styles.block)}>
                         <li>WhatsApp</li>
                     </Link>
                 </ul>
             </motion.nav>
 
-            <Link href={'https://wa.me/+77068171765'} className={styles.waBlock} target={'_blank'}>
+            <Link href={'https://api.whatsapp.com/send?phone=77068171765&text=Здраствуйте,%20пишу%20Вам%20с%20сайта.&source=&data='} className={styles.waBlock} target={'_blank'}>
                 <Image src={'/whatsapp_black.png'} width={64} height={64} alt={'whatsapp icon'} className={styles.waIcon}/>
             </Link>
         </div>

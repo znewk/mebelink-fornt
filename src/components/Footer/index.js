@@ -17,7 +17,7 @@ const Footer = () => {
                 <h2 className={styles.topTitle}>MEBELINK</h2>
 
                 <div className={styles.networks}>
-                    <Link href={'https://wa.me/+77068171765'}>
+                    <Link href={'https://api.whatsapp.com/send?phone=77068171765&text=Здраствуйте,%20пишу%20Вам%20с%20сайта.&source=&data='}>
                         <Image src={'/whatsapp.png'} height={64} width={64} className={styles.icon} alt={'icon'}/>
                     </Link>
                     <Link href={'https://instagram.com/mebelink.ast?igshid=Y2IzZGU1MTFhOQ=='}>

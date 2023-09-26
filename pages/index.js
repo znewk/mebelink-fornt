@@ -13,6 +13,7 @@ import DontWork from "../src/components/DontWork";
 import WhatsAppButton from "../src/components/WhatsAppButton";
 import { useEffect } from "react";
 import YandexMetrika from "../src/components/YandexMetrika";
+import PhoneButton from "../src/PhoneButton";
 
 const Index = () => {
 
@@ -36,6 +37,7 @@ const Index = () => {
             <Questions/>
             <ApplicationBlock/>
             <WhatsAppButton/>
+            <PhoneButton/>
 
             <Footer/>
 
