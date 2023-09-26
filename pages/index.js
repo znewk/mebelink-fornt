@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styles from "./main.module.css"
 import Header from "../src/components/Header";
-import ym from 'react-yandex-metrika';
 import IntroBlock from "../src/components/IntroBlock";
 import AboutUs from "../src/components/AboutUs";
 import Services from "../src/components/Services";
@@ -15,10 +14,15 @@ import WhatsAppButton from "../src/components/WhatsAppButton";
 
 const Index = () => {
 
+    useEffect(async ()=>{
+
+    }, [])
+
+
     const ymetrica = () => {
         return (
             "<!-- Yandex.Metrika counter -->\n" +
-            "   <script type=\"text/javascript\">\n" +
+            "   <script type=\"text/javascript\" >\n" +
             "       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\n" +
             "       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\n" +
             "        (window, document, \"script\", \"https://mc.yandex.ru/metrika/tag.js\", \"ym\");\n" +
@@ -52,7 +56,7 @@ const Index = () => {
             <Head>
                 <title>MEBELINK - Мебельное производство Астана</title>
                 <link rel="icon" href="/icon.png" />
-                {/* <div dangerouslySetInnerHTML={{__html: ymetrica()}}/> */}
+                <div dangerouslySetInnerHTML={{__html: ymetrica()}}/>
             </Head>
 
             <Header/>
